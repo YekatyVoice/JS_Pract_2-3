@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <script language="JavaScript">
+function f() {
+    var x = prompt("Введите значение координаты X: ","");
+	
+    var y = prompt("Введите значение Y:","");
+	
+	if ((x > 0) && (y > 0)){
+	  alert("Точка находится в I четверти." );}
+	  else if ((x < 0) && (y > 0)){
+	    alert("Точка находится в II четверти.");}
+	    else if ((x < 0) && (y < 0)){
+	      alert("Точка находится в III четверти.");}
+	      else if ((x > 0) && (y < 0)){
+	        alert("Точка находится в IV четверти.");}
+			else if (isNaN(x) || isNaN(y)){
+			  alert("Ошибка ввода!!! Введите числовые (ненулевые) значения X или Y!");
+	          var start = confirm("Начать заново?");
+			  f();}
+			  else if ((x == 0) || (y == 0)){    
+		        alert("Ошибка ввода!!! Введите ненулевые (числовые) значения X и Y!");
+				var start = confirm("Начать заново?");
+				f();}
+				else if ((x == null || y == null) || (x == "" || y == "")){
+		          alert("Ошибка ввода!!! Введите данные");
+				  var start = confirm("Начать заново?");
+				  f();}
+}
+f();
+ </script>
+</body>
+</html>
+
+
