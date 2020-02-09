@@ -4,29 +4,23 @@
  <script language="JavaScript">
 function f() {
     var x = prompt("Введите значение координаты X: ","");
-	
     var y = prompt("Введите значение Y:","");
 	
-	if ((x > 0) && (y > 0)){
-	  alert("Точка находится в I четверти." );}
-	  else if ((x < 0) && (y > 0)){
-	    alert("Точка находится в II четверти.");}
-	    else if ((x < 0) && (y < 0)){
-	      alert("Точка находится в III четверти.");}
-	      else if ((x > 0) && (y < 0)){
-	        alert("Точка находится в IV четверти.");}
-			
-			else if ((isNaN(x) || isNaN(y)) || ((x == 0) || (y == 0))){
-			  alert("Ошибка ввода!!! Введите числовые (ненулевые) значения X или Y!");
-	          var restart = confirm("Начать заново?");
-			  if (restart){f();}
-				  if (!restart){exit;}}
+if ((x > 0) && (y > 0)){alert("Точка находится в I четверти." );}
+  else if ((x < 0) && (y > 0)){alert("Точка находится в II четверти.");}
+    else if ((x < 0) && (y < 0)){alert("Точка находится в III четверти.");}
+      else if ((x > 0) && (y < 0)){alert("Точка находится в IV четверти.");}
+	else if ((isNaN(x) || isNaN(y)) || ((x == 0) || (y == 0))){
+	   alert("Ошибка ввода!!! Введите числовые (ненулевые) значения X или Y!");
+	   var restart = confirm("Начать заново?");
+	   if (restart){f();}
+	   if (!restart){exit;}}
 				  		  
-				else if ((x == null || y == null) || (x == "" || y == "")){
-		          alert("Ошибка ввода!!! Введите данные");
-				  var restart = confirm("Начать заново?");
-				  if (restart){f();}
-				     if (!restart){exit;}}
+	else if ((x == null || y == null) || (x == "" || y == "")){
+	  alert("Ошибка ввода!!! Введите данные");
+	  var restart = confirm("Начать заново?");
+	  if (restart){f();}
+	  if (!restart){exit;}}
 }
 f();
  </script>
