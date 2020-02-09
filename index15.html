@@ -3,6 +3,9 @@
 <body>
  <script>
   var YourName = prompt("Введите сюда свое имя", "Введите имя");
+	 if (YourName == "Введите имя") {
+		 alert ("Ошибка ввода!!!");
+		 exit;}
   peremennaya1 = YourName;
   alert ("Ваше имя " + peremennaya1 + ". Очень рады знакомству с Вами!!!");
   
@@ -15,11 +18,13 @@
 		alert("Ошибка ввода!!!");
 		exit;
 	}  
-  var start = confirm("Начать заново?");
-  alert (start);
-  
-
-  
+  var restart = confirm("Начать заново?");
+  if (restart){
+  location.reload();
+  }
+  if (!restart){
+  exit;
+  }	  
  </script>
 </body>
 </html>
